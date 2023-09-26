@@ -12,7 +12,7 @@
 
 
 
-<title>introduction</title>
+<title>Introduction</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -336,7 +336,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<h1 class="title toc-ignore">introduction</h1>
+<h1 class="title toc-ignore">Introduction</h1>
 
 
 
@@ -375,32 +375,38 @@ databases can be accessed using the <code>view_db()</code> function.
 Below is an example of how to view one of the regional databases.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#view a list of all available databases</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">db_names</span>()<span class="sc">$</span>fqa_db)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;atlantic_coastal_pine_barrens_2018&quot;      </span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2] &quot;chicago_region_2017&quot;                     </span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3] &quot;colorado_2020&quot;                           </span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4] &quot;dakotas_excluding_black_hills_2017&quot;      </span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [5] &quot;delaware_2013&quot;                           </span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [6] &quot;eastern_great_lakes_hudson_lowlands_2018&quot;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#NOTE citations for lists can be viewed using db_names()$citation</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;appalachian_mountains_2013&quot;         &quot;atlantic_coastal_pine_barrens_2018&quot;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3] &quot;chicago_region_2017&quot;                &quot;coastal_plain_southeast_2013&quot;      </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [5] &quot;colorado_2020&quot;                      &quot;dakotas_excluding_black_hills_2017&quot;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#NOTE citations for lists can be viewed using db_names()$citation</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#store the Colorado database as an object</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>colorado <span class="ot">&lt;-</span> <span class="fu">view_db</span>(<span class="st">&quot;colorado_2020&quot;</span>)</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#store the Colorado database as an object</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>colorado <span class="ot">&lt;-</span> <span class="fu">view_db</span>(<span class="st">&quot;colorado_2020&quot;</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#view it</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(colorado)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 13</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   name    name_origin acronym accepted_scientific_…¹ family nativity     c     w</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;   &lt;chr&gt;                  &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 ABIES … accepted_s… ABBI3   Abies bifolia          Pinac… native       5     1</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 ABIES … synonym     &lt;NA&gt;    Abies bifolia          Pinac… native       5     1</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 ABIES … accepted_s… ABCO    Abies concolor         Pinac… native       5    NA</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 ABRONI… accepted_s… ABEL    Abronia elliptica      Nycta… native       4    NA</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 ABRONI… accepted_s… ABFR2   Abronia fragrans       Nycta… native       6    NA</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 ABRONI… accepted_s… ABAR    Abronia glabrifolia    Nycta… native       9    NA</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # ℹ abbreviated name: ¹​accepted_scientific_name</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # ℹ 5 more variables: wetland_indicator &lt;chr&gt;, physiognomy &lt;chr&gt;,</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; #   duration &lt;chr&gt;, common_name &lt;chr&gt;, fqa_db &lt;chr&gt;</span></span></code></pre></div>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#view it</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(colorado)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                  name              name_origin acronym accepted_scientific_name</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1       ABIES BIFOLIA accepted_scientific_name   ABBI3            Abies bifolia</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2    ABIES LASIOCARPA                  synonym    &lt;NA&gt;            Abies bifolia</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3      ABIES CONCOLOR accepted_scientific_name    ABCO           Abies concolor</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4   ABRONIA ELLIPTICA accepted_scientific_name    ABEL        Abronia elliptica</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5    ABRONIA FRAGRANS accepted_scientific_name   ABFR2         Abronia fragrans</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 ABRONIA GLABRIFOLIA accepted_scientific_name    ABAR      Abronia glabrifolia</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;          family nativity c  w wetland_indicator physiognomy  duration</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1      Pinaceae   native 5  1              FACU        tree perennial</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2      Pinaceae   native 5  1              FACU        tree perennial</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3      Pinaceae   native 5 NA              &lt;NA&gt;        tree perennial</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 Nyctaginaceae   native 4 NA              &lt;NA&gt;        forb perennial</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 Nyctaginaceae   native 6 NA              &lt;NA&gt;        forb perennial</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 Nyctaginaceae   native 9 NA              &lt;NA&gt;        forb perennial</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   common_name        fqa_db</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1        &lt;NA&gt; colorado_2020</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2        &lt;NA&gt; colorado_2020</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3        &lt;NA&gt; colorado_2020</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4        &lt;NA&gt; colorado_2020</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5        &lt;NA&gt; colorado_2020</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6        &lt;NA&gt; colorado_2020</span></span></code></pre></div>
 <p><code>fqacalc</code> also comes with sample inventory data from
 Crooked Island, Michigan, downloaded from the <a href="https://universalfqa.org/">Universal FQA Calculator</a>. The data
 set is called <code>crooked_island</code> and is used in this tutorial
@@ -725,6 +731,9 @@ a data frame format.</p>
 </div>
 <div id="cover-weighted-functions" class="section level2">
 <h2>Cover-Weighted Functions</h2>
+</div>
+<div id="cover-weighted-functions-1" class="section level2">
+<h2>Cover-Weighted Functions</h2>
 <p>Cover-Weighted Functions calculate the same metrics but they are
 weighted by species abundance. Therefore, the input data frame must also
 have a column named <code>cover</code> containing cover values. Cover
@@ -734,6 +743,11 @@ Braun-Blanquet method).</p>
 percent cover. Internally, cover-weighted functions convert cover
 classes to the percent cover midpoint. For this reason, using percent
 cover is recommended over using cover classes.</p>
+<div id="braun-blanquet" class="section level4">
+<h4>Braun-Blanquet</h4>
+<p>Braun-Blanquet, Josias. “Plant sociology. The study of plant
+communities.” Plant sociology. The study of plant communities. First
+ed. (1932).</p>
 <table>
 <thead>
 <tr class="header">
@@ -775,6 +789,12 @@ cover is recommended over using cover classes.</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="carolina-veg-survey" class="section level4">
+<h4>Carolina Veg Survey</h4>
+<p>Lee, Michael T., Robert K. Peet, Steven D. Roberts, and Thomas R.
+Wentworth. “CVS-EEP protocol for recording vegetation.” Carolina
+Vegetation Survey. Retrieved August 17 (2006): 2008.</p>
 <table>
 <thead>
 <tr class="header">
@@ -836,6 +856,11 @@ cover is recommended over using cover classes.</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="daubenmire-classes" class="section level3">
+<h3>Daubenmire Classes</h3>
+<p>R. F. Daubenmire. “A canopy-cover method of vegetational analysis”.
+Northwest Science 33:43–46. (1959)</p>
 <table>
 <thead>
 <tr class="header">
@@ -877,6 +902,12 @@ cover is recommended over using cover classes.</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="usfs-ecodata-classes" class="section level3">
+<h3>USFS Ecodata Classes</h3>
+<p>Barber, Jim, and Dave Vanderzanden. “The Region 1 existing vegetation
+map products (VMap) release 9.1.” USDA Forest Service, Region 1 (2009):
+200.</p>
 <table>
 <thead>
 <tr class="header">
@@ -1097,6 +1128,7 @@ They can also use acronyms “GROUND” or “WATER”.</p>
 <span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   adjusted_FQI percent_ground_cover percent_water_cover</span></span>
 <span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     66.39528                   60                  NA</span></span>
 <span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2     53.07228                   20                  20</span></span></code></pre></div>
+</div>
 </div>
 </div>
 <div id="relative-functions" class="section level2">
