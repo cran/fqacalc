@@ -1,8 +1,9 @@
 Package: fqacalc
 Title: Calculate Floristic Quality Assessment Metrics
-Version: 1.1.0
+Version: 1.1.1
 Authors@R: c(
-    person("Iris", "Foxfoot", , "iris.r.foxfoot@usace.army.mil", role = c("aut", "cre")),
+    person("Iris", "Foxfoot", , role = c("aut")),
+    person("Todd", "Swannack", , email = "tswannack@gmail.com", role = c("cre")),
     person("U.S. Army Engineer Research and Development Center", role = c("cph", "fnd"))
   )
 Description: A collection of functions for calculating Floristic Quality
@@ -22,10 +23,13 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
 VignetteBuilder: knitr
+URL: https://github.com/EcoModTeam/fqacalc
+BugReports: https://github.com/EcoModTeam/fqacalc/issues
 NeedsCompilation: no
-Packaged: 2023-09-26 14:43:17 UTC; u4eewirf
-Author: Iris Foxfoot [aut, cre],
+Packaged: 2025-04-29 20:31:05 UTC; irisfoxfoot
+Author: Iris Foxfoot [aut],
+  Todd Swannack [cre],
   U.S. Army Engineer Research and Development Center [cph, fnd]
-Maintainer: Iris Foxfoot <iris.r.foxfoot@usace.army.mil>
+Maintainer: Todd Swannack <tswannack@gmail.com>
 Repository: CRAN
-Date/Publication: 2023-09-26 15:00:02 UTC
+Date/Publication: 2025-04-30 07:50:06 UTC

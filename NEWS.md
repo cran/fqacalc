@@ -1,3 +1,9 @@
+# fqacalc 1.1.1
+
+# fqacalc 1.1.1
+
+Ownership of `fqacalc` was transferred to the EcoModTeam github organization. The maintainer was updated to be Dr. Todd Swannack and the email to contact the maintainer was updated to tswannack@gmail.com.
+
 # fqacalc 1.1.0
 
 ## Breaking Changes
